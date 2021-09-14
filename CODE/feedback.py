@@ -10,4 +10,4 @@ def FeedbackControl(X, Xd, Xd_next, Kp, Ki, dt,e_int):
 	e_int = e_int + Xerr * dt
 	V = np.matmul(mr.Adjoint(np.dot(mr.TransInv(X),Xd)), Vd) + np.dot(Kp, Xerr) + np.dot(Ki,e_int)
 
-	return V, Xerr,e_int #twist in end effector frame
+	return V, Xerr,e_int #twist in end effector frame, #errot , # error integral
