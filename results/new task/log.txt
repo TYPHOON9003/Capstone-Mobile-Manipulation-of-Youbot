@@ -1,0 +1,7 @@
+generating trajectory
+simulation
+simulation done
+writing csvs
+erroe ploting
+
+Process finished with exit code 0
