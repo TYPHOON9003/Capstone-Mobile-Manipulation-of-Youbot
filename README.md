@@ -1,4 +1,4 @@
-# Capstone-Mobile-Manipulation-of-Youbot
+# Capstone Mobile Manipulation of KUKA YOUBOT
 
 This project is based on the Capstone mobile manipulation project from coursera course of Modern Robotics.
 For More Details you can refer the following link :
