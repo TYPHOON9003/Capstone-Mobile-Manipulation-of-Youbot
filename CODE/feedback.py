@@ -3,6 +3,10 @@ import numpy as np
 from math import sin,cos,fabs,copysign
 
 def jacobean(config,Blist,M0e,Tb0,F6):
+	'''
+	 creates the jacobean matrix of the base and arm
+	'''
+
 	thetalist = np.array([config[3:8]]).T
 	T0e = mr.FKinBody(M0e, Blist, thetalist)
 	J_base = np.dot(mr.Adjoint(np.dot(mr.TransInv(T0e), mr.TransInv(Tb0))), F6)
@@ -34,9 +38,12 @@ def FeedbackControl(config, Xd, Xd_next, Kp, Ki, dt,e_int,Blist,M0e,Tb0,F6,max_j
 	velocity = np.dot(np.linalg.pinv(J_e,1e-3),V)
 	velocity = joint_velocity_check(velocity,max_joint_velocity)
 	checklist = joint_limit_check(config,velocity,dt,joint_limits)
+	# make the according jacobean column of arm joint 0
 	for i in range (len(checklist)-1):
 		column = i+3
 		J_e[:,column] = checklist[i] * J_e[:,column]
+
+
 	return V, Xerr,J_e #twist in end effector frame,Xerr,jecobean matrix
 
 def joint_velocity_check(velocity,max_joint_velocity):

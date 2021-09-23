@@ -9,6 +9,7 @@ from nextstep import NextStep
 def MobileManipulator(bot_para,config,Blist,M0e,Tb0,Tse_init, Tsc_init, Tsc_final, Tce_grasp,
                       Tce_standoff,maxspeed,max_joint_velocity,joint_limits,dt,Kp_gain,Ki_gain,k,traj_type,method,outputname):
 
+
     Kp = np.identity(6) * Kp_gain
     Ki = np.identity(6) * Ki_gain
     e_int = np.zeros(6)
@@ -30,7 +31,7 @@ def MobileManipulator(bot_para,config,Blist,M0e,Tb0,Tse_init, Tsc_init, Tsc_fina
     print("generating trajectory")
     traj = TrajectoryGenerator(Tse_init, Tsc_init, Tsc_final, Tce_grasp, Tce_standoff,maxspeed, k,traj_type,method)
     df_traj = pd.DataFrame(traj)
-    name = 'trajectory' + outputname +'.csv'
+    name = 'trajectory_' + outputname +'.csv'
     df_traj.to_csv(name, index=False, header=False)
 
     timelist = []

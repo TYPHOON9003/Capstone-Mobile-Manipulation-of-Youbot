@@ -36,12 +36,12 @@ def main():
 
     # The cube's initial configuration:
     Tsc_init = np.array([[1, 0, 0, 1],
-                            [0, 1, 0, 0],
+                            [0, 1, 0, 1],
                             [0, 0, 1, 0.025],
                             [0, 0, 0, 1]])
 
     # The cube's desired final configuration:
-    Tsc_final = np.array([[0, 1, 0, 0],
+    Tsc_final = np.array([[0, 1, 0, -1],
                          [-1, 0, 0, -1],
                          [0, 0, 1, 0.025],
                          [0, 0, 0, 1]])
@@ -69,13 +69,14 @@ def main():
 
 
     #PID controller
-    Kp =10
-    Ki = 0.1
+    Kp =40
+    Ki = 0.2
     joint_limits = [[-1.6,1.6],[-1.9,1.2],[-1.9,1.5],[-2.89,2.89],[-2.89,2.89]]
 
-
+    # start simulation
     suceess = MobileManipulator(bot_para, config, Blist, M0e, Tb0, Tse_init, Tsc_init, Tsc_final,
-                                Tce_grasp, Tce_standoff, maxspeed,max_joint_velocity,joint_limits, dt, Kp, Ki, k, traj_type, method,'default')
+                                Tce_grasp, Tce_standoff, maxspeed,max_joint_velocity,joint_limits, dt, Kp, Ki, k,
+                                traj_type, method,'new_task')
 
     print('simulation completed')
 

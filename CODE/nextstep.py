@@ -19,6 +19,7 @@ def NextStep(current_config, controlspeed, dt, maxspeed,r,Hpsu):
     jointanglesspeed = [dj1,dj2,dj3,dj4,dj5]
     wheelspeed = [dw1,dw2,dw3,dw4]
 
+    # initialise the speed control
     for i in range(3):
         i = i + 1
         if wheelspeed[i] > maxspeed:
@@ -30,9 +31,10 @@ def NextStep(current_config, controlspeed, dt, maxspeed,r,Hpsu):
     joint_config = [j1, j2, j3, j4, j5]
     wheel_config = [w1, w2, w3, w4]
 
-    new_joint_config = [round(joint + dt*jointvelocity,5) for joint,jointvelocity in zip(joint_config,jointanglesspeed)]
-    new_wheel_config = [round(wheel + dt*whellvelocity,5) for wheel,whellvelocity in zip(wheel_config,wheelspeed)]
+    new_joint_config = [round(joint + dt*jointvelocity,4) for joint,jointvelocity in zip(joint_config,jointanglesspeed)]
+    new_wheel_config = [round(wheel + dt*whellvelocity,4) for wheel,whellvelocity in zip(wheel_config,wheelspeed)]
 
+    # odometry of wheeled mobile robot
     wheel_dtheta = np.array([dw1, dw2, dw3, dw4])
     new_wheel_theta = dt * wheel_dtheta
     Vb = (r / 4) * np.dot(Hpsu, new_wheel_theta)
