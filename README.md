@@ -22,9 +22,12 @@ Run `main.py`  to generate:
    * A plot showing the change of error twist versus time and the data file : `Xerr_*your given name*.csv` 
   
   # Results 
-  ## Animation for best PID controller kp = 20 and ki =0.1
+  ## CoppeliaSim Animation for best PID controller kp = 20 and ki =0.1
   
   <img src="./animation.gif" alt="PID error plot" style="zoom: 200%;" /> 
   
-  ## Error plot vs Time
+  ## Xerror plot vs Time
+  Xerror depends on values of Kp and Ki and can be minimized by choosing right Kp and Ki.
+  
+  Following Image shows Xerr VS time for the animation shown above
   <img src="./results/best/Xerr_best,kp=20,ki=0.1.png" alt="PID error plot" style="zoom: 200%;" /> 
