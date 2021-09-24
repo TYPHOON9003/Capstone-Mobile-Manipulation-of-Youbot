@@ -6,7 +6,7 @@ def main():
     bot_para = [0.47,0.3,0.0475,0.0963]     # [l,w,r,z]
     config = [0.1, -0.2, 0, 0, 0, 0.2, -1.6, 0, 0, 0, 0, 0, 0]  # youbot initial configuration
 
-    maxspeed = 0.5  # max velicity for wheel and joints
+    maxspeed = 0.5  # max velicity for wheel
     max_joint_velocity = 10 # max jointspeed
     dt = 0.01  #timestep
 
