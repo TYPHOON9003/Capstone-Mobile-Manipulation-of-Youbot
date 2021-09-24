@@ -13,7 +13,14 @@ This projects Covers following topics :
 
 
 # Instructions for usage
-Run `main.py`  to generate:
+Programme uses following libraries
+* **Modern Robotics**  download it [here](https://github.com/NxRLab/ModernRobotics)
+* **Numpy**
+* **Mathplotlib**
+* **Math**
+* **Pandas**
+
+Run `main.py` from  `CODE` folder to generate:
 
    * A file contains the calculated trajectory for the end-effector : `trajectory_*your given name*.csv`
 
