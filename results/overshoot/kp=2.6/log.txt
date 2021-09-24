@@ -1,0 +1,6 @@
+C:\Users\parma\AppData\Local\Programs\Python\Python39\python.exe "D:/00 pole lec/Modern robotics/GitHub/CODE/main.py"
+generating trajectory
+running simulation
+simulation completed
+
+Process finished with exit code 0
