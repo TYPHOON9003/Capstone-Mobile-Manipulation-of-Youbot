@@ -30,7 +30,7 @@ Run `main.py` from  `CODE` folder to generate:
    * A plot showing the change of error twist versus time and the data file : `Xerr_*your given name*.csv` 
   
   # Results 
-  ## CoppeliaSim Animation for best PID controller kp = 20 and ki =0.1
+  ## CoppeliaSim Animation for best PI controller kp = 20 and ki =0.1
   
   <img src="./animation.gif" alt="PID error plot" style="zoom: 200%;" /> 
   
