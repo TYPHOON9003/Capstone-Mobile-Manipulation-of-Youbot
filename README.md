@@ -19,4 +19,7 @@ Run `main.py`  to generate:
 
    * A file used to simulate the robot motion in *CoppeliaSim* : `config_*your given name*.csv`
 
-   * A plot showing the change of error twist versus time and the data file : `Xerr_*your given name.csv*`
+   * A plot showing the change of error twist versus time and the data file : `Xerr_*your given name*.csv` 
+  
+  # Results 
+  <img src="./results/best/Xerr_best,kp=20,ki=0.1.png" alt="PID error plot" style="zoom: 200%;" /> 
