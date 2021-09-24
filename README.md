@@ -9,6 +9,7 @@ This projects Covers following topics :
 * Generate the kinematics simulator of the youBot - an omnidirectional mobile robot with a 5-DOF robotic arm.
 * Plan the end-effector's trajectory between waypoints.
 * Apply feedback control to drive the robot in the desired trajectory.
+* apply joint limts to avoid sigularities.
 * Simulate the planned trajectory in CoppeliaSim.
 
 
